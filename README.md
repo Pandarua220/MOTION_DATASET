@@ -4,7 +4,6 @@ This is code repository for the paper "Can Video-Actigraphy Alone be used for Ne
 To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data**.
 
 ### Data Statistics:
-| Metric | Value |
 | :--- | :--- |
 | Number of Subjects | 54 |
 | Total Recording Hours | 177 hours |
