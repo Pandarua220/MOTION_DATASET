@@ -15,50 +15,26 @@ To address the lack of accessible data in this field, we have released a process
 
 ```text
 sleep_git
- ─ code
-   ─ Feature_Extraction                      # Preprocesses raw motion signals and extract features
-      ─ keypoint_preprocess.mlx              # Step 1: Preprocess keypoint coordinates
-      ─ kp_displacement_calculate.py         # Step 2: Calculates inter-frame keypoint displacement
-      ─ threshold_calculate_displacement.py  # Step 3: Calculates displacement threshold statistics
-      ─ extract_features_displacement.py     # Step 4: Extracts keypoint displacement features
-      ─ ...
-   ─ ML_Classifier           # Traditional machine learning classifiers, including SVM, LDA, and Balanced Random Forest (BRF)
-   ─ DL_Classifier           # Deep learning classifiers, including MLP, LSTM, GRU and Transformer
- ─ dataset                   # Dataset directory
-   ─ 2024-8
-      ─ psg_sig              # PSG (Polysomnography) labels
-      ─ motion_signal        # Raw motion signals
-      ─ cam_delay.mat        # delay between the PSG and camera
-      ─ interference.xlsx    # Records video segments with interference to be excluded
-   ─ 2025-8
-      ─ ...
-```
-
-```text
-sleep_git
 ├─ code
-│  ├─ Feature_Extraction      # Feature extraction module: processes raw motion signals
-│  │  ├─ kp_displacement_calculate.py         # Calculates inter-frame keypoint displacement
-│  │  ├─ extract_features_opticalflow.py      # Extracts optical flow statistical features
-│  │  ├─ threshold_calculate_displacement.py  # Calculates displacement threshold statistics
-│  │  └─ ... (Includes MATLAB preprocessing scripts and utilities)
-│  ├─ ML_Classifier           # Traditional machine learning classifiers
-│  │  ├─ classify.py          # Supports SVM, LDA, and Balanced Random Forest (BRF)
-│  │  └─ utils.py             # Data loading and validation utilities
-│  └─ DL_Classifier           # Deep learning classifiers
-│     ├─ model.py             # Contains GRU, LSTM, Transformer, and MLP models
-│     ├─ dataloader.py        # Enhanced DataLoader with sequence masking support
-│     └─ classify.py          # Batch training script with 9-Fold Cross-Validation
-└─ dataset                    # Dataset directory (2024-8 and 2025-8 batches)
-   ├─ psg_sig                 # PSG (Polysomnography) labels and aligned data
-   ├─ motion_signal           # Raw motion signals (AggPose results, optical flow results)
-   └─ interference.xlsx       # Records video segments with interference to be excluded
+│  ├─ Feature_Extraction                      # Preprocesses raw motion signals and extract features
+│  │  ├─ keypoint_preprocess.mlx              # Step 1: Preprocess keypoint coordinates
+│  │  ├─ kp_displacement_calculate.py         # Step 2: Calculates inter-frame keypoint displacement
+│  │  ├─ threshold_calculate_displacement.py  # Step 3: Calculates displacement threshold statistics
+│  │  ├─ extract_features_displacement.py     # Step 4: Extracts keypoint displacement features
+│  │  └─ ...
+│  ├─ ML_Classifier           # Machine learning classifiers, including SVM, LDA, and Balanced Random Forest (BRF)
+│  └─ DL_Classifier           # Deep learning classifiers, including MLP, LSTM, GRU and Transformer
+└─ dataset                    # Dataset directory
+│  ├─ 2024-8
+│  │  ├─ psg_sig                 # PSG (Polysomnography) labels
+│  │  ├─ motion_signal           # Raw motion signals
+│  │  ├─ cam_delay.mat           # delay between the PSG and camera
+│  │  ├─ interference.xlsx       # Records video segments with interference to be excluded
+│  ├─ 2025-8
+│  │  └─ ...
 ```
 
-## Usage Instructions
+### Usage Instructions
 
 To extract keypoint-displacement features, run Steps 1–4 sequentially. For optical-flow features, run the optical-flow version of Steps 3–4 (Python files suffixed with `opticalflow`).
 Then ML/DL classifiers can be tested in folder ML_Classifier and DL_Classifier, respectively.
-
----
-```
