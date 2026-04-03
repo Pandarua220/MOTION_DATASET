@@ -33,6 +33,26 @@ sleep_git
    ─ 2025-8
       ─ ...
 '''
+```text
+sleep_git
+├─ code
+│  ├─ Feature_Extraction      # Feature extraction module: processes raw motion signals
+│  │  ├─ kp_displacement_calculate.py         # Calculates inter-frame keypoint displacement
+│  │  ├─ extract_features_opticalflow.py      # Extracts optical flow statistical features
+│  │  ├─ threshold_calculate_displacement.py  # Calculates displacement threshold statistics
+│  │  └─ ... (Includes MATLAB preprocessing scripts and utilities)
+│  ├─ ML_Classifier           # Traditional machine learning classifiers
+│  │  ├─ classify.py          # Supports SVM, LDA, and Balanced Random Forest (BRF)
+│  │  └─ utils.py             # Data loading and validation utilities
+│  └─ DL_Classifier           # Deep learning classifiers
+│     ├─ model.py             # Contains GRU, LSTM, Transformer, and MLP models
+│     ├─ dataloader.py        # Enhanced DataLoader with sequence masking support
+│     └─ classify.py          # Batch training script with 9-Fold Cross-Validation
+└─ dataset                    # Dataset directory (2024-8 and 2025-8 batches)
+   ├─ psg_sig                 # PSG (Polysomnography) labels and aligned data
+   ├─ motion_signal           # Raw motion signals (AggPose results, optical flow results)
+   └─ interference.xlsx       # Records video segments with interference to be excluded
+```
 
 ## Usage Instructions
 
