@@ -1,7 +1,11 @@
 # Video-actigraphy-based Sleep Staging
 This is code repository for the paper "Can Video-Actigraphy Alone be used for Neonatal Sleep Staging? A Clinical Study".
 
-To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data**.
+To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data**, which consists of two parts: 
+
+First, skeleton landmark (21 keypoints) were extracted using the AggPose framework, providing a 2D skeletal representation $\{ (x_i, y_i, c_i) \}_{i=1}^N$ along with their respective detection confidences.
+
+Second, to quantify local motion dynamics, we calculated the mean optical flow magnitude within a $41 \times 41$ pixel Region of Interest (ROI) centered at each keypoint.
 
 ### Data Statistics:
 | Metric | Value |
