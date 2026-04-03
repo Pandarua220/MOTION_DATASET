@@ -1,7 +1,7 @@
 # Video-actigraphy-based Sleep Staging
 This is code repository for the paper "Can Video-Actigraphy Alone be used for Neonatal Sleep Staging? A Clinical Study".
 
-To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data**, which consists of two parts: 
+To address the lack of accessible data in this field, we have released a de-identified version of our clinical dataset（recorded in NICU). The dataset provides **pure video-actigraphy data**, which consists of two parts: 
 
 First, skeleton landmarks (21 keypoints) were extracted using the AggPose framework, providing a 2D skeletal representation for each frame along with their respective detection confidences.
 
@@ -26,9 +26,9 @@ sleep_git
 │  │  ├─ threshold_calculate_displacement.py  # Step 3: Calculates displacement threshold statistics
 │  │  ├─ extract_features_displacement.py     # Step 4: Extracts keypoint displacement features
 │  │  └─ ...
-│  ├─ ML_Classifier           # Machine learning classifiers, including SVM, LDA, and Balanced Random Forest (BRF)
-│  └─ DL_Classifier           # Deep learning classifiers, including MLP, LSTM, GRU and Transformer
-└─ dataset                    # Dataset directory
+│  ├─ ML_Classifier              # Machine learning classifiers, including SVM, LDA, and Balanced Random Forest (BRF)
+│  └─ DL_Classifier              # Deep learning classifiers, including MLP, LSTM, GRU and Transformer
+└─ dataset                       # Dataset directory
 │  ├─ 2024-8
 │  │  ├─ psg_sig                 # PSG (Polysomnography) labels
 │  │  ├─ motion_signal           # Raw motion signals
