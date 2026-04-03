@@ -13,6 +13,7 @@ To address the lack of accessible data in this field, we have released a process
 
 ### Code Structure
 
+'''
 sleep_git
  ─ code
    ─ Feature_Extraction                      # Preprocesses raw motion signals and extract features
@@ -31,7 +32,7 @@ sleep_git
       ─ interference.xlsx    # Records video segments with interference to be excluded
    ─ 2025-8
       ─ ...
-
+'''
 
 ## Usage Instructions
 
