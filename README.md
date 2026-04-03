@@ -32,8 +32,8 @@ sleep_git
 │  ├─ 2024-8
 │  │  ├─ psg_sig                 # PSG (Polysomnography) labels
 │  │  ├─ motion_signal           # Raw motion signals
-│  │  │  ├─ optical_flow_41      # keypoints' coordinates
-│  │  │  ├─ aggpose_result       # Optical flow results
+│  │  │  ├─ optical_flow_41      # Optical flow results
+│  │  │  ├─ aggpose_result       # Keypoints' coordinates
 │  │  ├─ cam_delay.mat           # delay between the PSG and camera
 │  │  ├─ interference.xlsx       # Records video segments with interference to be excluded
 │  ├─ 2025-8
