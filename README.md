@@ -38,6 +38,6 @@ sleep_git
 
 First set the working directory to the `code`.
 
-Then to extract keypoint-displacement features, run Steps 1–4 sequentially. For optical-flow features, run the optical-flow version of Steps 3–4 (Python files suffixed with `opticalflow`).
+Then to extract keypoint-displacement features, run Step 1–4 sequentially. For optical-flow features, run the optical-flow version of Step 3–4 (Python files suffixed with `opticalflow`).
 
 Finally, ML/DL classifiers can be tested with code in `ML_Classifier` and `DL_Classifier`, respectively.
