@@ -1,7 +1,7 @@
 # Video-actigraphy-based Sleep Staging
 This is code repository for the paper "Can Video-Actigraphy Alone be used for Neonatal Sleep Staging? A Clinical Study".
 
-To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data** instead of raw RGB video.
+To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data**.
 
 ### Data Statistics:
 | Metric | Value |
@@ -36,5 +36,8 @@ sleep_git
 
 ### Usage Instructions
 
-To extract keypoint-displacement features, run Steps 1–4 sequentially. For optical-flow features, run the optical-flow version of Steps 3–4 (Python files suffixed with `opticalflow`).
-Then ML/DL classifiers can be tested in folder ML_Classifier and DL_Classifier, respectively.
+First set the working directory to the `code`.
+
+Then to extract keypoint-displacement features, run Steps 1–4 sequentially. For optical-flow features, run the optical-flow version of Steps 3–4 (Python files suffixed with `opticalflow`).
+
+Finally, ML/DL classifiers can be tested with code in `ML_Classifier` and `DL_Classifier`, respectively.
