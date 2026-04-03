@@ -1,7 +1,7 @@
 # Video-actigraphy-based Sleep Staging
 This is code repository for the paper "Can Video-Actigraphy Alone be used for Neonatal Sleep Staging? A Clinical Study".
 
-To address the lack of accessible data in this field, we have released a processed version of our clinical dataset. We provide **pure video-actigraphy data** instead of raw RGB video.
+To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data** instead of raw RGB video.
 
 ### Data Statistics:
 | Metric | Value |
@@ -11,7 +11,7 @@ To address the lack of accessible data in this field, we have released a process
 | Sampling Rate | 20 FPS |
 | Labels | NREM, REM, Wake |
 
-## Code Structure
+### Code Structure
 
 sleep_git
  ─ code
