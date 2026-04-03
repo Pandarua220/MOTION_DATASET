@@ -3,7 +3,11 @@ This is code repository for the paper "Can Video-Actigraphy Alone be used for Ne
 
 To address the lack of accessible data in this field, we have released a processed version of our clinical dataset （recored in NICU). We provide **pure video-actigraphy data**, which consists of two parts: 
 
-First, skeleton landmarks (21 keypoints) were extracted using the AggPose framework, providing a 2D skeletal representation ${ (x_i, y_i, c_i) }_{i=1}^{N}$ for each frame along with their respective detection confidences, where $i$ represents the keypoint index (ranging from 1 to 21) and $N$ denotes the total number of frames.
+First, skeleton landmarks (21 keypoints) were extracted using the AggPose framework, providing a 2D skeletal representation for each frame along with their respective detection confidences:
+
+${ (x_i, y_i, c_i) }_{i=1}^{N}$
+
+where $i$ represents the keypoint index (ranging from 1 to 21) and $N$ denotes the total number of frames.
 
 Second, to quantify local motion dynamics, we calculated the mean optical flow magnitude within a $41 \times 41$ pixel Region of Interest (ROI) centered at each keypoint.
 
